@@ -1,0 +1,187 @@
+@import "./assets/styles/fonts/fonts";
+@import "./assets/styles/variables";
+
+$duration: 1000ms;
+$maxWidth: 60em;
+
+body {
+  font-family: $fontRegular;
+  font-size: $fontSizeBase;
+  color: $colorTextGrey;
+}
+
+#grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  column-gap: 1%;
+  max-width: $maxWidth;
+  margin: 0 auto; // center
+}
+
+canvas#animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#page-title {
+  position: sticky;
+  top: 3rem;
+  height: fit-content;
+  opacity: 0;
+  transition: opacity $duration; // for fade in
+  grid-column: col-start / span 7;
+  padding: 0 2rem;
+
+  .title {
+    font-family: $fontBlack;
+    font-size: $fontSizeXLarge;
+    line-height: 1em;
+    color: transparent;
+    -webkit-text-stroke: black 1px;
+    transform-origin: left;
+    transition: transform $duration; // for transition to header
+  }
+
+  .subtitle {
+    margin-top: 1em;
+    max-width: 30em;
+    font-family: $fontRegular;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.fixed {
+    // still postion:sticky from above
+    grid-column: col-start/span 12;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 0.5px solid #aaa;
+    box-sizing: border-box;
+    z-index: 5;
+
+    .title {
+      transform: scale(0.8);
+      max-width: 40rem;
+      cursor: pointer; // jumps to top
+    }
+
+    .subtitle {
+      display: none;
+    }
+  }
+}
+
+#student-list {
+  position: relative;
+  align-self: center;
+  font-family: $fontLight;
+  font-size: 1.1618em;
+  grid-column: col-start 10 / span 3;
+  margin: 3rem 0;
+  min-height: 100vh;
+
+  .row {
+    opacity: 0;
+    transition: opacity $duration;
+    cursor: pointer;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    &:hover {
+      font-family: $fontBold;
+    }
+  }
+}
+
+#content-wrapper {
+  position: relative;
+  padding: 2rem;
+  background-color: white;
+  grid-column: col-start / span 12;
+
+  .student {
+    position: relative;
+    border-bottom: 0.5px black solid;
+    padding: 2em 0;
+
+    .student-name {
+      font-size: $fontSizeLarge;
+      font-family: $fontBold;
+      text-transform: uppercase;
+    }
+
+    .student-desc{
+
+      a{
+        text-decoration: none;
+        .project-title{
+          padding-top: 0.5em;
+          font-family: $fontBold;
+          text-transform: uppercase;
+          transform-origin: left;
+          color: $colorTextGrey;
+          font-size: larger;
+
+          &:hover{
+            color: $colorEmphasis;
+          }
+
+        }
+      }
+    }
+
+    .student-socials {
+      img {
+        height: 1.5em;
+        cursor: pointer;
+        padding-right: 0.5rem;
+        transform-origin: center;
+        color: $colorTextGrey;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .student-work-grid {
+      margin-top: 0.5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2em;
+
+      .student-images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .student-img {
+          img {
+            width: 100%;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 0.5em;
+            border-bottom: 0.5px solid $colorTextGrey;
+          }
+        }
+      }
+    }
+
+    .scroll-to-top {
+      position: absolute;
+      top: 2em;
+      right: 1em;
+      cursor: pointer;
+    }
+  }
+}

@@ -37,9 +37,10 @@ export class Title {
     subtitleWrapper
       .append("div")
       .attr("class", "subtitle")
-      .text(
-        "M.S. Data Analysis and Visualization"
+      .html(
+        `<a href="https://gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Masters-Programs/Data-Analysis-and-Visualization">M.S. Data Analysis and Visualization</a>`
       );
+
   }
 
   scrollToTop() {

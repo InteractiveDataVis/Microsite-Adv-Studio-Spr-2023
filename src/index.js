@@ -24,7 +24,8 @@ class Controller {
     this.animation.startAnimation();
 
     csv("public/siteData.csv", autoType).then((data) => {
-      this.data = data.sort((a, b) => ascending(a[name], b[name]));
+      // sort by last name alphabetically
+      this.data = data.sort((a, b) => ascending(a[name].split(" ")[1], b[name].split(" ")[1]));
       this.init();
       console.log("this.data", this.data);
     });

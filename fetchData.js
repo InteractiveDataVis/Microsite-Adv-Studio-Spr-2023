@@ -12,8 +12,8 @@ const {
 } = require("./src/utils/constants");
 
 const sheetOpt = {
-  id: "1jg1quJkA0nngDk6mu-DBl7kv0ZYtU4XmLEmrbewTuuI",
-  gid: 1307304957,
+  id: "1nX1MKu89TdMP2iPr_7guwm10XPgqe_-xpWKe7uj0hwc",
+  gid: 453240768,
 };
 const sheetURL = `https://docs.google.com/spreadsheets/u/1/d/${sheetOpt.id}/export?format=csv&id=${sheetOpt.id}&gid=${sheetOpt.gid}`;
 
@@ -35,8 +35,6 @@ axios
         ];
       }, [])
       .filter(([d]) => d);
-
-    // console.log("imagesToFetch", imagesToFetch);
 
     let errors = [];
     imagesToFetch.forEach(

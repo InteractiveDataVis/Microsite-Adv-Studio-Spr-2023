@@ -9,15 +9,36 @@ export class Title {
 
     this.el
       .append("div")
-      .attr("class", "title")
-      .text("Interactive Data Visualization Showcase")
-      .on("click", this.scrollToTop);
+      .attr("class", "showcase")
+      .text("Project Showcase")
 
     this.el
       .append("div")
+      .attr("class", "title")
+      .text("Advanced Interactive Data Visualization Studio")
+      .on("click", this.scrollToTop);
+
+    const subtitleWrapper = this.el
+      .append("div")
+      .attr("class", "subtitleWrapper")
+
+    subtitleWrapper
+      .append("div")
       .attr("class", "subtitle")
       .text(
-        "Student portfolios from Spring 2020 Masters in Data Visualization Program at the CUNY Graduate Center"
+        "Fall 2020"
+      );
+    subtitleWrapper
+      .append("div")
+      .attr("class", "subtitle")
+      .text(
+        "CUNY Graduate Center"
+      );
+    subtitleWrapper
+      .append("div")
+      .attr("class", "subtitle")
+      .text(
+        "M.S. Data Analysis and Visualization"
       );
   }
 

@@ -58,8 +58,7 @@ export class Animation {
     // reset on resize
     this.canvas.attr("width", this.width).attr("height", this.height);
     this.ctx = this.canvas.node().getContext("2d");
-    this.ctx.fillStyle = "rgba(255, 255, 255, 1)";
-    this.ctx.fillRect(0, 0, this.width, this.height); // clear canvas
+    this.draw();
   }
 
   startAnimation() {

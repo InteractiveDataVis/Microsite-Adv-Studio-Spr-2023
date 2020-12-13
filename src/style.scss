@@ -57,11 +57,15 @@ canvas#animation {
   }
 
   .subtitleWrapper{
-    font-size: larger;
+    font-size: 1.3em;
     font-family: $fontTradeRegular;
     margin-top: .5em;
     .subtitle {
       max-width: 30em;
+
+      a:hover{
+        font-family: $fontBold;
+      }
     }
   }
 
@@ -84,8 +88,6 @@ canvas#animation {
       transform: scale(0.6);
       max-width: 40rem;
       cursor: pointer; // jumps to top
-      color: $colorEmphasis;
-      opacity: .7;
     }
 
     .subtitleWrapper, .showcase {
@@ -204,5 +206,14 @@ canvas#animation {
       right: 1em;
       cursor: pointer;
     }
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+
+  &:hover{
+    font-weight: 900;
   }
 }

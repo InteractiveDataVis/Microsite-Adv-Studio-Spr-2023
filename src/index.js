@@ -5,6 +5,7 @@ import { StudentList } from "./components/StudentList";
 import { Content } from "./components/Content";
 
 import "./style.scss";
+import "./media_styles.scss";
 
 import { appConfig, keys } from "./utils/constants";
 const { titleDelay } = appConfig;

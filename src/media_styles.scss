@@ -1,0 +1,77 @@
+@import '../src/assets/styles/variables';
+
+@media (max-width: 600px) {
+
+  body{
+    scroll-padding: 3em;
+  }
+
+  #grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #page-title{
+    grid-column: unset;
+    position: relative;
+    min-height: 50vh;
+
+    .title{
+      font-size: 2.5em;
+    }
+
+    &.fixed{
+      grid-column: unset;
+      background-color: unset;
+      top: unset;
+      left: unset;
+      width: unset;
+      border-bottom: none;
+      z-index: unset;
+
+    }
+  }
+
+  #student-list{
+    grid-column: unset;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: .5em;
+    row-gap: .5em;
+    grid-auto-rows: min-content;
+    font-size: 1.3em;
+    line-height: 1em;
+    align-self: unset;
+
+    .row{
+      margin-bottom: .25em;
+    }
+  }
+
+  #content-wrapper{
+    grid-column: unset;
+
+    // &:before{
+    //   content: "Advanced Interactive Data Visualization Studio";
+    //   position: sticky;
+    //   top: 0;
+    //   background-color: white;
+    //   z-index: 4;
+    //   display: block;
+    //   padding: 1em 0;
+    //   font-size: 1.3em;
+    //   font-family: $fontBlack;
+    //   border-bottom: 0.5px solid #aaa;
+    // }
+
+    .student{
+      .student-work-grid{
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+      }
+    }
+
+  }
+}

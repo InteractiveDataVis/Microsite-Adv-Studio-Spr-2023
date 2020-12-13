@@ -7,7 +7,7 @@ $maxWidth: 60em;
 body {
   font-family: $fontTradeRegular;
   font-size: $fontSizeBase;
-  color: $colorTextGrey;
+  color: $colorDarkBlue;
 }
 
 #grid {
@@ -36,7 +36,7 @@ canvas#animation {
   transition: opacity $duration; // for fade in
   grid-column: col-start / span 8;
   padding: 0 2rem;
-  color: $colorLightGrey;
+  color: $colorDarkBlue;
 
   .showcase{
     position: absolute;
@@ -51,8 +51,7 @@ canvas#animation {
     font-family: $fontBlack;
     font-size: 4em;
     line-height: 1em;
-    color: transparent;
-    -webkit-text-stroke: $colorDarkBlue 1px;
+    // -webkit-text-stroke: $colorDarkBlue 1px;
     transform-origin: left;
     transition: transform $duration; // for transition to header
   }
@@ -82,9 +81,11 @@ canvas#animation {
     z-index: 5;
 
     .title {
-      transform: scale(0.7);
+      transform: scale(0.6);
       max-width: 40rem;
       cursor: pointer; // jumps to top
+      color: $colorEmphasis;
+      opacity: .7;
     }
 
     .subtitleWrapper, .showcase {
@@ -97,7 +98,7 @@ canvas#animation {
   position: relative;
   box-sizing: border-box;
   align-self: center;
-  font-family: $fontLight;
+  font-family: $fontCondensed;
   font-size: 1.5em;
   grid-column: col-start 10 / span 3;
   min-height: 100vh;
@@ -116,7 +117,8 @@ canvas#animation {
     }
 
     &:hover {
-      font-family: $fontBold;
+      font-weight: 700;
+      color: $colorEmphasis;
     }
   }
 }
@@ -129,7 +131,7 @@ canvas#animation {
 
   .student {
     position: relative;
-    border-bottom: 0.5px black solid;
+    border-bottom: 0.5px $colorDarkBlue solid;
     padding: 2em 0;
 
     .student-name {

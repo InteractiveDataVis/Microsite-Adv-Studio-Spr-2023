@@ -21,7 +21,7 @@ export class StudentList {
       .attr("class", "row")
       .text(d => d[name])
       .style("transition-delay", (d, i) => `${i * delay}ms`)
-      .on("click", this.scrollToName);
+      .on("click", (e, d) => this.scrollToName(d));
   }
 
   scrollToName(d) {

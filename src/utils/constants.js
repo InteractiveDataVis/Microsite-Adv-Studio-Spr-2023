@@ -22,9 +22,8 @@ appConfig.makeImgPath = (name, key) =>
 export const animationConfig = {
   getWidth: () => window.innerWidth,
   getHeight: () => window.innerHeight,
-  count: 25,
-  delay: 1500,
-  drawRate: 35,
+  gridCnt: 40,
+  cellSize: 30,
 };
 
 export const listConfig = {

@@ -28,7 +28,6 @@
       width: unset;
       border-bottom: none;
       z-index: unset;
-
     }
   }
 
@@ -52,18 +51,19 @@
   #content-wrapper{
     grid-column: unset;
 
-    // &:before{
-    //   content: "Advanced Interactive Data Visualization Studio";
-    //   position: sticky;
-    //   top: 0;
-    //   background-color: white;
-    //   z-index: 4;
-    //   display: block;
-    //   padding: 1em 0;
-    //   font-size: 1.3em;
-    //   font-family: $fontBlack;
-    //   border-bottom: 0.5px solid #aaa;
-    // }
+    // fake sticky header
+    &:before{
+      content: "Advanced Interactive Data Visualization Studio";
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 4;
+      display: block;
+      padding: 1em 0;
+      font-size: 1.3em;
+      font-family: $fontBlack;
+      border-bottom: 0.5px solid #aaa;
+    }
 
     .student{
       .student-work-grid{

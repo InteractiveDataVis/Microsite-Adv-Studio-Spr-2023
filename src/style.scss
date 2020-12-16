@@ -207,6 +207,19 @@ canvas#animation {
       cursor: pointer;
     }
   }
+
+  #page-credits{
+    h3{
+      text-transform: uppercase;
+      margin: 0;
+      padding-top: .5em;
+    }
+
+    h2{
+      margin: 0;
+      padding: .5em 0;
+    }
+  }
 }
 
 a{

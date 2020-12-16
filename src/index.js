@@ -28,7 +28,6 @@ class Controller {
       // sort by last name alphabetically
       this.data = data.sort((a, b) => ascending(a[name].split(" ")[1], b[name].split(" ")[1]));
       this.init();
-      console.log("this.data", this.data);
     });
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -43,7 +42,6 @@ class Controller {
     this.title = new Title();
     this.studentList = new StudentList(this.data);
     this.content = new Content(this.data);
-
     // to switch the title to fixed header on scroll
     // observe when bottom content section comes into screen
     this.observer = new IntersectionObserver(this.handleScroll, {

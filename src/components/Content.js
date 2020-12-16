@@ -1,5 +1,5 @@
 import { select } from "d3";
-import { keys, appConfig } from "../utils/constants";
+import { keys, appConfig, courseDescription } from "../utils/constants";
 
 import GithubIcon from "../assets/github.svg";
 import UpArrow from "../assets/arrow_upward-24px.svg";
@@ -105,6 +105,19 @@ export class Content {
       .attr("class", "up-arrow")
       .attr("src", UpArrow)
       .on("click", this.scrollToTop);
+
+    this.credits = this.contentWrapper.append("div")
+      .attr("id", "page-credits")
+
+    this.credits.append("h3").text("Course Description")
+    this.credits.append("a")
+      .attr("href", "https://gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Masters-Programs/Data-Analysis-and-Visualization/Courses/Fall-2020")
+      .append("h2").attr("class", "title").text("Advanced Interactive Data Visualization Studio")
+    this.credits.selectAll(".description")
+      .data(courseDescription)
+      .join("p")
+      .attr("class", 'description')
+      .html(d => d)
   }
 
   scrollToTop() {

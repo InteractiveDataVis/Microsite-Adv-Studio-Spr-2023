@@ -40,7 +40,12 @@ export class Title {
       .html(
         `<a href="https://gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Masters-Programs/Data-Analysis-and-Visualization">M.S. Data Analysis and Visualization</a>`
       );
-
+    subtitleWrapper
+      .append("div")
+      .attr("class", "subtitle")
+      .html(
+        `<a href="#page-credits">Course Description</a>`
+      )
   }
 
   scrollToTop() {

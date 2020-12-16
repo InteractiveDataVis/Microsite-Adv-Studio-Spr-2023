@@ -12,7 +12,7 @@ export const keys = {
 };
 
 export const appConfig = {
-  titleDelay: 2500,
+  titleDelay: 500,
   getHash: (str) => str.toLowerCase().split(" ").join("_").split(",").join("_"),
 };
 

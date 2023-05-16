@@ -14,7 +14,7 @@ export class Title {
 
     const subtitleWrapper = this.el.append('div').attr('class', 'subtitleWrapper');
 
-    subtitleWrapper.append('div').attr('class', 'subtitle').text('Spring 2022');
+    subtitleWrapper.append('div').attr('class', 'subtitle').text('Spring 2023');
     subtitleWrapper.append('div').attr('class', 'subtitle').text('CUNY Graduate Center');
     subtitleWrapper
       .append('div')

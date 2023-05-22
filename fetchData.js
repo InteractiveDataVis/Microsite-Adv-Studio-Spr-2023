@@ -12,11 +12,10 @@ const {
 } = require('./src/utils/constants');
 
 const sheetOpt = {
-  id: '1E9B3BUVze4jS6At8ywm5UoYyVgyH9PQRk6kBCs3gIAc',
-  gid: 453240768,
+  id: '1RkdnE4MDMhyJlBh60Pec7Lg24BmBc6cC_QgomElIsCU',
+  gid: 453240768
 };
 const sheetURL = `https://docs.google.com/spreadsheets/u/1/d/${sheetOpt.id}/export?format=csv&id=${sheetOpt.id}&gid=${sheetOpt.gid}`;
-
 axios
   .get(sheetURL)
   .then(

@@ -50,6 +50,7 @@
 
   #content-wrapper{
     grid-column: unset;
+    padding: unset;
 
     // fake sticky header
     &:before{
@@ -59,18 +60,23 @@
       background-color: white;
       z-index: 4;
       display: block;
-      padding: 1em 0;
+      padding: 1em;
       font-size: 1.3em;
       font-family: $fontBlack;
       border-bottom: 0.5px solid #aaa;
     }
 
     .student{
+      padding: 2em;
       .student-work-grid{
         display: flex;
         flex-direction: column;
         flex-flow: column-reverse;
       }
+    }
+
+    #page-credits {
+      padding: 2em;
     }
 
   }

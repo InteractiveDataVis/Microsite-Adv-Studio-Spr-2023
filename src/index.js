@@ -26,7 +26,7 @@ class Controller {
 
     csv("public/siteData.csv", autoType).then((data) => {
       // sort by last name alphabetically
-      this.data = data.sort((a, b) => ascending(a[name].split(" ")[1], b[name].split(" ")[1]));
+      this.data = data //.sort((a, b) => ascending(a[name].split(" ")[1], b[name].split(" ")[1]));
       this.init();
     });
 
